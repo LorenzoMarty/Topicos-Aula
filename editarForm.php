@@ -9,7 +9,7 @@
 
 <body>
     <?php
-
+    include("conecta.php");
 
     $email = $_GET["email"];
     $senha = $_GET["senha"];
@@ -18,7 +18,7 @@
     $resultado = mysqli_query($conexao, $sql);
     $dados = mysqli_fetch_assoc($resultado);
     ?>
-    <form action="cadastrar.php" method="post">
+    <form action="editar.php" method="post">
         <input type="text" name="email" value="<?php echo $dados['email']; ?>">
         <input type="text" name="senha" value="<?php echo $dados['senha']; ?>">
         <input type="submit" value="Enviar">

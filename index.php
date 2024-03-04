@@ -8,6 +8,7 @@
 </head>
 
 <body>
+    <a href="cadastrarForm.html">Cadastrar</a>
     <?php
 
     include("conecta.php");
