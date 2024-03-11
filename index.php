@@ -31,7 +31,8 @@
     while ($dados = mysqli_fetch_assoc($resultado)) {
         echo "<td> " . $dados['id_usuario'] . " </td>";
         echo "<td> " . $dados['email'] . "</td>";
-        echo "<td><a href='editarForm.php?email=" . $dados['email'] . "&senha=" . $dados['senha'] . "'>" . "<img src='settings.png' widht='20' height='20'" . "</a>";
+        echo "<td> " . $dados['senha'] . "</td>";
+        echo "<td><a href='editarForm.php?id_usuario=" . $dados['id_usuario'] ."&email=" . $dados['email'] . "&senha=" . $dados['senha'] . "'>" . "<img src='settings.png' widht='20' height='20'" . "</a>";
         echo " <a href='excluir.php?id_usuario=" . $dados['id_usuario'] . "'>" . "<img src='lixeira.png' widht='20' height='20'" . "</a></td>";
         echo '</tr>';
     }
